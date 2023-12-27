@@ -53,6 +53,7 @@
             // 
             // Titeltextbox
             // 
+            this.Titeltextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Titeltextbox.Location = new System.Drawing.Point(12, 306);
             this.Titeltextbox.Name = "Titeltextbox";
             this.Titeltextbox.Size = new System.Drawing.Size(2242, 44);
@@ -60,6 +61,7 @@
             // 
             // Beschreibungtextbox
             // 
+            this.Beschreibungtextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Beschreibungtextbox.Location = new System.Drawing.Point(13, 397);
             this.Beschreibungtextbox.Name = "Beschreibungtextbox";
             this.Beschreibungtextbox.Size = new System.Drawing.Size(2242, 44);
@@ -83,39 +85,48 @@
             // 
             // CmdNeu
             // 
+            this.CmdNeu.BackColor = System.Drawing.Color.SteelBlue;
+            this.CmdNeu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.CmdNeu.Location = new System.Drawing.Point(12, 465);
             this.CmdNeu.Name = "CmdNeu";
             this.CmdNeu.Size = new System.Drawing.Size(555, 85);
             this.CmdNeu.TabIndex = 5;
             this.CmdNeu.Text = "Neu";
-            this.CmdNeu.UseVisualStyleBackColor = true;
+            this.CmdNeu.UseVisualStyleBackColor = false;
+            this.CmdNeu.Click += new System.EventHandler(this.CmdNeu_Click);
             // 
             // CmdBearbeiten
             // 
+            this.CmdBearbeiten.BackColor = System.Drawing.Color.Wheat;
             this.CmdBearbeiten.Location = new System.Drawing.Point(573, 465);
             this.CmdBearbeiten.Name = "CmdBearbeiten";
             this.CmdBearbeiten.Size = new System.Drawing.Size(555, 85);
             this.CmdBearbeiten.TabIndex = 6;
             this.CmdBearbeiten.Text = "Bearbeiten";
-            this.CmdBearbeiten.UseVisualStyleBackColor = true;
+            this.CmdBearbeiten.UseVisualStyleBackColor = false;
+            this.CmdBearbeiten.Click += new System.EventHandler(this.CmdBearbeiten_Click);
             // 
             // CmdLöschen
             // 
+            this.CmdLöschen.BackColor = System.Drawing.Color.Salmon;
             this.CmdLöschen.Location = new System.Drawing.Point(1141, 465);
             this.CmdLöschen.Name = "CmdLöschen";
             this.CmdLöschen.Size = new System.Drawing.Size(555, 85);
             this.CmdLöschen.TabIndex = 7;
             this.CmdLöschen.Text = "Löschen";
-            this.CmdLöschen.UseVisualStyleBackColor = true;
+            this.CmdLöschen.UseVisualStyleBackColor = false;
+            this.CmdLöschen.Click += new System.EventHandler(this.CmdLöschen_Click);
             // 
             // CmdSpeichern
             // 
+            this.CmdSpeichern.BackColor = System.Drawing.Color.YellowGreen;
             this.CmdSpeichern.Location = new System.Drawing.Point(1702, 465);
             this.CmdSpeichern.Name = "CmdSpeichern";
             this.CmdSpeichern.Size = new System.Drawing.Size(555, 85);
             this.CmdSpeichern.TabIndex = 8;
             this.CmdSpeichern.Text = "Speichern";
-            this.CmdSpeichern.UseVisualStyleBackColor = true;
+            this.CmdSpeichern.UseVisualStyleBackColor = false;
+            this.CmdSpeichern.Click += new System.EventHandler(this.CmdSpeichern_Click);
             // 
             // ToDoListView
             // 
@@ -132,8 +143,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(2267, 1245);
+            this.BackColor = System.Drawing.Color.PowderBlue;
+            this.ClientSize = new System.Drawing.Size(2287, 1250);
             this.Controls.Add(this.ToDoListView);
             this.Controls.Add(this.CmdSpeichern);
             this.Controls.Add(this.CmdLöschen);
@@ -146,6 +157,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Todolist";
             this.Text = "To-Do List";
+            this.Load += new System.EventHandler(this.Todolist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ToDoListView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
